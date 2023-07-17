@@ -11,6 +11,7 @@ import CardContent from "@mui/material/CardContent";
 import Link from "@mui/material/Link";
 import "./App.css";
 import logo from "./Prisma-IndigoLogo.png";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 function App() {
   const [commitId, setCommitId] = useState("");
@@ -28,14 +29,30 @@ function App() {
 
   return (
     <Box className="App">
-      <img
-        src={logo}
-        alt="Prisma Logo"
-        style={{ width: "200px", marginBottom: "40px", marginTop: "10px" }}
-      />
-      <Typography variant="h4" gutterBottom style={{ marginBottom: "40px" }}>
-        Prisma Engine Downloader
-      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          width: "100%",
+          marginBottom: "40px",
+        }}
+      >
+        <img src={logo} alt="Prisma Logo" style={{ width: "200px" }} />
+        <Typography variant="h4" gutterBottom style={{ marginBottom: "0px" }}>
+          Prisma Engine Downloader
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<GitHubIcon />}
+          href="https://github.com/nurul3101/prisma-engine-downloader"
+          target="_blank"
+          rel="noopener"
+        >
+          View on GitHub
+        </Button>
+      </Box>
       <div className="input-fields" style={{ marginBottom: "40px" }}>
         <Box sx={{ mb: 2, mr: 2 }}>
           <CommitIdInput commitId={commitId} setCommitId={setCommitId} />
@@ -99,7 +116,11 @@ function App() {
             >
               tags page
             </Link>
-            .
+            . The commit hash is associated with the version of Prisma you have
+            installed. You can find it by running the command{" "}
+            <code>npx prisma -v</code> in your terminal. This will display the
+            version of Prisma and the associated commit hash. Use this hash to
+            download the corresponding Prisma engine.
           </Typography>
           <Typography variant="body1" gutterBottom sx={{ mt: 2 }}>
             <strong>PLATFORM:</strong> This is the platform for which you want
