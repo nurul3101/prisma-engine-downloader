@@ -6,11 +6,12 @@ import FormControl from "@mui/material/FormControl";
 
 const EngineNameSelector = ({ engineName, setEngineName }) => {
   const engineNames = [
-    "libquery_engine.so.node",
-    "query-engine",
+    "libquery_engine.so.node (Library)",
+    "query-engine (Binary)",
     "migration-engine",
     "introspection-engine",
     "prisma-fmt",
+    "schema-engine",
   ];
 
   return (

@@ -85,11 +85,11 @@ function App() {
             <br />
             <code>
               https://binaries.prisma.sh/all_commits/
-              {"{COMMIT_ID}/{PLATFORM}/{ENGINE_NAME}.gz"}
+              {"{COMMIT_HASH}/{PLATFORM}/{ENGINE_NAME}.gz"}
             </code>
           </Typography>
           <Typography variant="body1" gutterBottom sx={{ mt: 2 }}>
-            <strong>COMMIT_ID:</strong> This is the full commit hash from
+            <strong>COMMIT_HASH:</strong> This is the full commit hash from
             Prisma's GitHub repository. You can find the specific commit related
             to the release you want on the{" "}
             <Link
@@ -118,7 +118,8 @@ function App() {
             want to download. Options include:{" "}
             <i>
               libquery_engine.so.node, query-engine, migration-engine,
-              introspection-engine, and prisma-fmt.
+              introspection-engine, schema-engine(only for prisma v5.0.0+) and
+              prisma-fmt.
             </i>
           </Typography>
         </CardContent>
