@@ -1,38 +1,45 @@
+/* App.css */
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background-color: #f9f9f9;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.App h4 {
+  color: #0a2540;
+  margin-bottom: 30px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-fields .MuiFormControl-root {
+  min-width: 200px;
+}
+
+.button {
+  margin-top: 20px;
+  background-color: #5a20b9;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: #4816a1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-link {
+  margin-top: 30px;
+  color: #5a20b9;
+  text-decoration: none;
 }
