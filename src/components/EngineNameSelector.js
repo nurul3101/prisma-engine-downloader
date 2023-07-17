@@ -5,9 +5,18 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 
 const EngineNameSelector = ({ engineName, setEngineName }) => {
-  const engineNames = [
+  const engineLabels = [
     "libquery_engine.so.node (Library)",
     "query-engine (Binary)",
+    "schema-engine",
+    "migration-engine",
+    "introspection-engine",
+    "prisma-fmt",
+  ];
+
+  const engineValues = [
+    "libquery_engine.so.node",
+    "query-engine",
     "schema-engine",
     "migration-engine",
     "introspection-engine",
@@ -23,9 +32,9 @@ const EngineNameSelector = ({ engineName, setEngineName }) => {
         onChange={(e) => setEngineName(e.target.value)}
         label="Engine Name"
       >
-        {engineNames.map((engineName) => (
-          <MenuItem key={engineName} value={engineName}>
-            {engineName}
+        {engineLabels.map((engineLabel, index) => (
+          <MenuItem key={engineLabel} value={engineValues[index]}>
+            {engineLabel}
           </MenuItem>
         ))}
       </Select>
