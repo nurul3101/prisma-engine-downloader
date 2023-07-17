@@ -8,10 +8,10 @@ const EngineNameSelector = ({ engineName, setEngineName }) => {
   const engineNames = [
     "libquery_engine.so.node (Library)",
     "query-engine (Binary)",
+    "schema-engine",
     "migration-engine",
     "introspection-engine",
     "prisma-fmt",
-    "schema-engine",
   ];
 
   return (
